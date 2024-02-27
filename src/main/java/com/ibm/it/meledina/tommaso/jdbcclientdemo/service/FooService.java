@@ -11,7 +11,7 @@ public class FooService {
 
     private final GreetingFormatDao greetingFormatDao;
 
-    public String getGreeting(String recipient, RecipientKind recipientKind) {
-        return String.format(greetingFormatDao.getGreetingTemplate(recipientKind), recipient);
+    public String getGreeting(String recipientName, RecipientKind recipientKind) {
+        return String.format(greetingFormatDao.getGreetingTemplate(recipientKind), recipientName);
     }
 }

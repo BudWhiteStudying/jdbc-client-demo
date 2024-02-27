@@ -16,7 +16,7 @@ public class FooController {
     private final FooService fooService;
 
     @GetMapping("/greeting")
-    public String getGreeting(@RequestParam(name="recipient") String recipient, @RequestParam(name="recipientKind") RecipientKind recipientKind) {
-        return fooService.getGreeting(recipient, recipientKind);
+    public String getGreeting(@RequestParam(name="recipientName") String recipientName, @RequestParam(name="recipientKind") RecipientKind recipientKind) {
+        return fooService.getGreeting(recipientName, recipientKind);
     }
 }
